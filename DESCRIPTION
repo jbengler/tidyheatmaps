@@ -25,6 +25,6 @@ Suggests:
     testthat (>= 2.1.0),
     knitr,
     rmarkdown
-URL: https://github.com/jbengler/tidyheatmap
-BugReports: https://github.com/jbengler/tidyheatmap/issues
+URL: https://github.com/jbengler/tidyheatmaps
+BugReports: https://github.com/jbengler/tidyheatmaps/issues
 VignetteBuilder: knitr
