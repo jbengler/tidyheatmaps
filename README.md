@@ -6,14 +6,14 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.org/jbengler/tidyheatmap.svg?branch=master)](https://travis-ci.org/jbengler/tidyheatmap)
+status](https://travis-ci.com/jbengler/tidyheatmaps.svg?branch=master)](https://travis-ci.com/jbengler/tidyheatmaps)
 [![Codecov test
-coverage](https://codecov.io/gh/jbengler/tidyheatmap/branch/master/graph/badge.svg)](https://codecov.io/gh/jbengler/tidyheatmap?branch=master)
+coverage](https://codecov.io/gh/jbengler/tidyheatmaps/branch/master/graph/badge.svg)](https://codecov.io/gh/jbengler/tidyheatmaps?branch=master)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of `tidyheatmaps` is to provide a tidyverse-style interface to
+The goal of `tidyheatmap` is to provide a tidyverse-style interface to
 the powerful heatmap package
 [pheatmap](https://github.com/raivokolde/pheatmap) by
 [@raivokolde](https://github.com/raivokolde). This enables the
@@ -22,7 +22,7 @@ code.
 
 ## Installation
 
-You can install `tidyheatmaps` from GitHub with:
+You can install `tidyheatmap` from GitHub with:
 
 ``` r
 # install.packages("devtools")
@@ -54,4 +54,4 @@ tidy_heatmap(data_exprs,
 
 ## Documentation
 
-<https://jbengler.github.io/tidyheatmap/>
+<https://jbengler.github.io/tidyheatmaps/>
