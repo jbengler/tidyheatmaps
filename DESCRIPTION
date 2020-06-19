@@ -1,0 +1,30 @@
+Package: tidyheatmaps
+Title: Heatmaps from tidy data
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Jan Broder",
+           family = "Engler",
+           role = c("aut", "cre"),
+           email = "broder.engler@gmail.com",
+           comment = c(ORCID = "0000-0002-3169-2076"))
+Description: The goal of tidyheatmaps is to provide a tidyverse-style interface to the powerful heatmap package pheatmap by @raivokolde. This enables the convenient generation of complex heatmaps from tidy data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports: 
+    dplyr,
+    pheatmap,
+    rlang,
+    grDevices,
+    tidyr,
+    tibble,
+    RColorBrewer
+Suggests: 
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+URL: https://github.com/jbengler/tidyheatmap
+BugReports: https://github.com/jbengler/tidyheatmap/issues
+VignetteBuilder: knitr

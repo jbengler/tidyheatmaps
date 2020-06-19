@@ -1,0 +1,10 @@
+^tidyheatmaps\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^usethis\.R$
+^README\.Rmd$
+^\.travis\.yml$
+^cran-comments\.md$

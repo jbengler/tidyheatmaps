@@ -1,0 +1,9 @@
+destination: docs
+
+reference:
+- title: "Data sets"
+  contents:
+    - data_exprs
+- title: "Functions"
+  contents:
+    - tidy_heatmap

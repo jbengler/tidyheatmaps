@@ -1,0 +1,7 @@
+.Rproj
+.Rproj.user
+.DS_Store
+.Rhistory
+.RData
+usethis.R
+inst/doc
