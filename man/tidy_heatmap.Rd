@@ -204,7 +204,7 @@ It enables the convenient generation of complex heatmaps from tidy data.
 \details{
 \itemize{
 \item \code{tidy_heatmap()} requires tidy data in long format, see \href{https://tidyr.tidyverse.org/index.html}{tidyverse}.
-\item For more documentation also look into the \href{https://jbengler.github.io/tidyheatmap/articles/tidyheatmap.html}{Get started} guide.
+\item For more documentation also look into the \href{https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html}{Get started} guide.
 }
 }
 \examples{

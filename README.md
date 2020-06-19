@@ -13,7 +13,7 @@ coverage](https://codecov.io/gh/jbengler/tidyheatmaps/branch/master/graph/badge.
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of `tidyheatmap` is to provide a tidyverse-style interface to
+The goal of `tidyheatmaps` is to provide a tidyverse-style interface to
 the powerful heatmap package
 [pheatmap](https://github.com/raivokolde/pheatmap) by
 [@raivokolde](https://github.com/raivokolde). This enables the
@@ -22,7 +22,7 @@ code.
 
 ## Installation
 
-You can install `tidyheatmap` from GitHub with:
+You can install `tidyheatmaps` from GitHub with:
 
 ``` r
 # install.packages("devtools")

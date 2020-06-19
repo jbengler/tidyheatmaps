@@ -60,7 +60,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' It enables the convenient generation of complex heatmaps from tidy data.
 #'
 #' * `tidy_heatmap()` requires tidy data in long format, see [tidyverse](https://tidyr.tidyverse.org/index.html).
-#' * For more documentation also look into the [Get started](https://jbengler.github.io/tidyheatmap/articles/tidyheatmap.html) guide.
+#' * For more documentation also look into the [Get started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html) guide.
 #'
 #' @param df A tidy dataframe in long format.
 #'
