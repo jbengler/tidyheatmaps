@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # tidyheatmaps
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.com/jbengler/tidyheatmaps.svg?branch=master)](https://travis-ci.com/jbengler/tidyheatmaps)
+[![Travis build status](https://travis-ci.org/jbengler/tidyheatmaps.svg?branch=master)](https://travis-ci.org/jbengler/tidyheatmaps)
 [![Codecov test coverage](https://codecov.io/gh/jbengler/tidyheatmaps/branch/master/graph/badge.svg)](https://codecov.io/gh/jbengler/tidyheatmaps?branch=master)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->

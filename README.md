@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Travis build
-status](https://travis-ci.com/jbengler/tidyheatmaps.svg?branch=master)](https://travis-ci.com/jbengler/tidyheatmaps)
+status](https://travis-ci.org/jbengler/tidyheatmaps.svg?branch=master)](https://travis-ci.org/jbengler/tidyheatmaps)
 [![Codecov test
 coverage](https://codecov.io/gh/jbengler/tidyheatmaps/branch/master/graph/badge.svg)](https://codecov.io/gh/jbengler/tidyheatmaps?branch=master)
 [![Lifecycle:
