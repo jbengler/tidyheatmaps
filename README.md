@@ -26,7 +26,6 @@ You can install `tidyheatmaps` from GitHub with:
 
 ``` r
 # install.packages("devtools")
-
 devtools::install_github("jbengler/tidyheatmaps")
 ```
 
@@ -54,4 +53,6 @@ tidy_heatmap(data_exprs,
 
 ## Documentation
 
-<https://jbengler.github.io/tidyheatmaps/>
+  - [Documentation](https://jbengler.github.io/tidyheatmaps/)
+  - [Get
+    started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html)
