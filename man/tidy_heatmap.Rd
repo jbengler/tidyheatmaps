@@ -18,6 +18,8 @@ tidy_heatmap(
   annotation_col = NULL,
   gaps_row = NULL,
   gaps_col = NULL,
+  show_selected_row_labels = NULL,
+  show_selected_col_labels = NULL,
   filename = NA,
   scale = "none",
   fontsize = 7,
@@ -78,6 +80,9 @@ Values smaller then the \code{color_legend_min} will have the lowest color, \cod
 To use multiple columns for annotation combine then by \code{c(column1, column2)}.}
 
 \item{gaps_row, gaps_col}{Column in the dataframe to use for use for \code{row} and \code{column} gaps.}
+
+\item{show_selected_row_labels, show_selected_col_labels}{Only display a subset of selected labels for \code{rows} and \code{columns}.
+Provide selected labels as \code{c("label1", "label2")}.}
 
 \item{filename}{file path where to save the picture. Filetype is decided by 
 the extension in the path. Currently following formats are supported: png, pdf, tiff,

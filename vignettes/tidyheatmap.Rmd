@@ -195,6 +195,27 @@ tidy_heatmap(data_exprs,
 )
 ```
 
+## Show selected labels
+
+To highlight a selection of row or column labels while hiding the rest, you can use `show_selected_row_labels` or `show_selected_col_labels`, respectively.
+
+```{r fig.asp=0.8}
+tidy_heatmap(data_exprs,
+             rows = external_gene_name,
+             columns = sample,
+             values = expression,
+             scale = "row",
+             annotation_col = c(sample_type, condition, group),
+             annotation_row = c(is_immune_gene, direction),
+             annotation_colors = ann_colors,
+             gaps_row = direction,
+             gaps_col = group,
+             cellwidth = 7,
+             cellheight = 7,
+             show_selected_row_labels = c("Apol6","Bsn","Vgf","Fam96b","Bag1","Aip"),
+)
+```
+
 ## Write to file
 
 You can use the parameter `filename` to write the heatmap to file.

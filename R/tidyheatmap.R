@@ -78,6 +78,9 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' @param gaps_row,gaps_col Column in the dataframe to use for use for `row` and `column` gaps.
 #' @inheritParams pheatmap::pheatmap
 #'
+#' @param show_selected_row_labels,show_selected_col_labels Only display a subset of selected labels for `rows` and `columns`.
+#' Provide selected labels as `c("label1", "label2")`.
+#'
 #' @return
 #' Invisibly a `pheatmap` object that is a list with components
 #' * `tree_row` the clustering of rows as `hclust` object
@@ -151,6 +154,9 @@ tidy_heatmap <- function(df,
                          gaps_row = NULL,
                          gaps_col = NULL,
 
+                         show_selected_row_labels = NULL,
+                         show_selected_col_labels = NULL,
+
                          filename = NA,
                          scale = "none",
                          fontsize = 7,
@@ -203,8 +209,20 @@ tidy_heatmap <- function(df,
   if(is.numeric(color_legend_min) & is.numeric(color_legend_max) & is.numeric(color_legend_n))
     breaks <- seq(color_legend_min, color_legend_max, length.out = color_legend_n+1)
 
-  if (any(is.na(colors)))
+  if(any(is.na(colors)))
     colors <-  rev(RColorBrewer::brewer.pal(n = 7, name ="RdYlBu"))
+
+  labels_row <- NULL
+  if(!is.null(show_selected_row_labels) & is.character(show_selected_row_labels)) {
+    labels_row = rownames(heatmap_data$m)
+    labels_row[!labels_row %in% show_selected_row_labels] = ""
+  }
+
+  labels_col <- NULL
+  if(!is.null(show_selected_col_labels) & is.character(show_selected_col_labels)) {
+    labels_col = colnames(heatmap_data$m)
+    labels_col[!labels_col %in% show_selected_col_labels] = ""
+  }
 
   pheatmap::pheatmap(heatmap_data$m,
                      color = grDevices::colorRampPalette(colors)(color_legend_n),
@@ -215,6 +233,9 @@ tidy_heatmap <- function(df,
                      annotation_col = heatmap_data$annotation_col,
                      gaps_row = heatmap_data$gaps_row,
                      gaps_col = heatmap_data$gaps_col,
+
+                     labels_row = labels_row,
+                     labels_col = labels_col,
 
                      filename = filename,
                      scale = scale,
