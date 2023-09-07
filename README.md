@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/jbengler/tidyheatmaps.svg?branch=master)](https://travis-ci.org/jbengler/tidyheatmaps)
 [![Codecov test
 coverage](https://codecov.io/gh/jbengler/tidyheatmaps/branch/master/graph/badge.svg)](https://codecov.io/gh/jbengler/tidyheatmaps?branch=master)
 [![Lifecycle:
@@ -51,8 +49,6 @@ tidy_heatmap(data_exprs,
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-## Documentation
+## Learn more
 
-  - [Documentation](https://jbengler.github.io/tidyheatmaps/)
-  - [Get
-    started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html)
+<https://jbengler.github.io/tidyheatmaps/>

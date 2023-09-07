@@ -1,5 +1,5 @@
 Package: tidyheatmaps
-Title: Heatmaps from Tidy Data
+Title: Heatmaps From Tidy Data
 Version: 0.1.0
 Authors@R: 
     person(given = "Jan Broder",
