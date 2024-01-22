@@ -1,9 +1,4 @@
-destination: docs
+url: https://jbengler.github.io/tidyheatmaps/
+template:
+  bootstrap: 5
 
-reference:
-- title: "Data sets"
-  contents:
-    - data_exprs
-- title: "Functions"
-  contents:
-    - tidy_heatmap

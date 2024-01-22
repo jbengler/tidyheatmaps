@@ -1,7 +1,10 @@
-pandoc: 2.17.1.1
-pkgdown: 2.0.3
+pandoc: 3.1.1
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   tidyheatmap: tidyheatmap.html
-last_built: 2022-05-12T13:17Z
+last_built: 2024-01-22T20:27Z
+urls:
+  reference: https://jbengler.github.io/tidyheatmaps/reference
+  article: https://jbengler.github.io/tidyheatmaps/articles
 

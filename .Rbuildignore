@@ -1,10 +1,10 @@
-^tidyheatmaps\.Rproj$
+^tidyplots\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^README\.Rmd$
+^usethis\.R
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-^usethis\.R$
-^README\.Rmd$
-^\.travis\.yml$
-^cran-comments\.md$
+^\.github$
+^data-raw$

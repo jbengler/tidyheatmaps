@@ -1,33 +1,24 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidyheatmaps
+# tidyheatmaps <img src="man/figures/logo.svg" align="right" height="139" alt="" />
 
 <!-- badges: start -->
-
-[![Codecov test
-coverage](https://codecov.io/gh/jbengler/tidyheatmaps/branch/master/graph/badge.svg)](https://codecov.io/gh/jbengler/tidyheatmaps?branch=master)
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-The goal of `tidyheatmaps` is to provide a tidyverse-style interface to
-the powerful heatmap package
-[pheatmap](https://github.com/raivokolde/pheatmap) by
-[@raivokolde](https://github.com/raivokolde). This enables the
-convenient generation of complex heatmaps from tidy data with minimal
-code.
+tidyheatmaps simplifies the generation of publication-ready heatmaps
+from tidy data. By offering an interface to the powerful
+[pheatmap](https://github.com/raivokolde/pheatmap) package, it allows
+for the effortless creation of intricate heatmaps with minimal code.
 
 ## Installation
 
-You can install `tidyheatmaps` from GitHub with:
-
 ``` r
-# install.packages("devtools")
-devtools::install_github("jbengler/tidyheatmaps")
+# install.packages("pak")
+pak::pak("jbengler/tidyheatmaps")
 ```
 
-## Example
+## Usage
 
 Given a tidy data frame of gene expression data like `data_exprs`, you
 can easily generate a customized heatmap.
@@ -47,8 +38,8 @@ tidy_heatmap(data_exprs,
 )
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-## Learn more
+## Documentation
 
 <https://jbengler.github.io/tidyheatmaps/>
