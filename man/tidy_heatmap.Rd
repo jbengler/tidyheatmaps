@@ -2,7 +2,7 @@
 % Please edit documentation in R/tidyheatmap.R
 \name{tidy_heatmap}
 \alias{tidy_heatmap}
-\title{Pretty heatmaps from tidy data}
+\title{Create heatmap from tidy data}
 \usage{
 tidy_heatmap(
   df,

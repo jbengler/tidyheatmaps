@@ -1,4 +1,4 @@
-#' Expression data from RNA-Seq study.
+#' Expression data from RNA-Seq study
 #'
 #' This data was taken form a RNA-Seq study investigating the regulation of genes
 #' in response to central nervous system inflammation.

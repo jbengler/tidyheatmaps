@@ -2,3 +2,11 @@ url: https://jbengler.github.io/tidyheatmaps/
 template:
   bootstrap: 5
 
+authors:
+  Jan Broder Engler:
+    href: https://github.com/jbengler
+
+reference:
+- contents:
+  - starts_with("tidy")
+  - starts_with("data")

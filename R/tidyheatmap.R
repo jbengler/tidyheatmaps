@@ -52,7 +52,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
   list(m = m, annotation_row = annotation_row, annotation_col = annotation_col, gaps_row = gaps_row, gaps_col = gaps_col)
 }
 
-#' Pretty heatmaps from tidy data
+#' Create heatmap from tidy data
 #'
 #' A tidyverse-style interface to the powerful heatmap package
 #' [pheatmap](https://github.com/raivokolde/pheatmap)

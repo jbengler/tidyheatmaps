@@ -3,7 +3,7 @@
 \docType{data}
 \name{data_exprs}
 \alias{data_exprs}
-\title{Expression data from RNA-Seq study.}
+\title{Expression data from RNA-Seq study}
 \format{
 A data frame with 800 rows and 9 variables:
 \describe{
