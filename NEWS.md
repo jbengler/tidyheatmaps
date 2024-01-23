@@ -1,3 +1,3 @@
 # tidyheatmaps 0.1.0
 
-* Initial release. The goal of 'tidyheatmaps' is to provide a tidyverse-style interface to the powerful heatmap package 'pheatmap'. This enables the convenient generation of complex heatmaps from tidy data with minimal code.
+* Initial release. tidyheatmaps simplifies the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful [pheatmap](https://github.com/raivokolde/pheatmap) package, it allows for the effortless creation of intricate heatmaps with minimal code.
