@@ -21,7 +21,8 @@ pak::pak("jbengler/tidyheatmaps")
 ## Usage
 
 Given a tidy data frame of gene expression data like `data_exprs`, you
-can easily generate a customized heatmap.
+can easily generate a customized heatmap. The full documentation can be
+found [here](https://jbengler.github.io/tidyheatmaps/).
 
 ``` r
 library(tidyheatmaps)
@@ -40,6 +41,8 @@ tidy_heatmap(data_exprs,
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-## Documentation
+## Acknowledgements
 
-<https://jbengler.github.io/tidyheatmaps/>
+tidyplots relies on a number of fantastic packages that do all the heavy
+lifting behind the scenes. These include dplyr, pheatmap, rlang,
+grDevices, tidyr, tibble and RColorBrewer.
