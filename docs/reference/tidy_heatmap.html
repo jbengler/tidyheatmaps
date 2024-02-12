@@ -122,6 +122,64 @@ It enables the convenient generation of complex heatmaps from tidy data.</p>
 <span>  width <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  height <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  silent <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tidyheatmap</span><span class="op">(</span></span>
+<span>  <span class="va">df</span>,</span>
+<span>  <span class="va">rows</span>,</span>
+<span>  <span class="va">columns</span>,</span>
+<span>  <span class="va">values</span>,</span>
+<span>  colors <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  color_legend_n <span class="op">=</span> <span class="fl">15</span>,</span>
+<span>  color_legend_min <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  color_legend_max <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  color_na <span class="op">=</span> <span class="st">"#DDDDDD"</span>,</span>
+<span>  annotation_row <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  annotation_col <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  gaps_row <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  gaps_col <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  show_selected_row_labels <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  show_selected_col_labels <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  filename <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  scale <span class="op">=</span> <span class="st">"none"</span>,</span>
+<span>  fontsize <span class="op">=</span> <span class="fl">7</span>,</span>
+<span>  cellwidth <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  cellheight <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  cluster_rows <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  cluster_cols <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  border_color <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  kmeans_k <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  clustering_distance_rows <span class="op">=</span> <span class="st">"euclidean"</span>,</span>
+<span>  clustering_distance_cols <span class="op">=</span> <span class="st">"euclidean"</span>,</span>
+<span>  clustering_method <span class="op">=</span> <span class="st">"complete"</span>,</span>
+<span>  clustering_callback <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">...</span><span class="op">)</span> <span class="op">{</span></span>
+<span>     <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span> <span class="op">}</span>,</span>
+<span>  cutree_rows <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  cutree_cols <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  treeheight_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">cluster_rows</span><span class="op">)</span> <span class="op">==</span> <span class="st">"hclust"</span><span class="op">)</span> <span class="op">||</span> <span class="va">cluster_rows</span>, <span class="fl">50</span>, <span class="fl">0</span><span class="op">)</span>,</span>
+<span>  treeheight_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">class</a></span><span class="op">(</span><span class="va">cluster_cols</span><span class="op">)</span> <span class="op">==</span> <span class="st">"hclust"</span><span class="op">)</span> <span class="op">||</span> <span class="va">cluster_cols</span>, <span class="fl">50</span>, <span class="fl">0</span><span class="op">)</span>,</span>
+<span>  legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  legend_breaks <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  legend_labels <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  annotation_colors <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  annotation_legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  annotation_names_row <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  annotation_names_col <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  drop_levels <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  show_rownames <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  show_colnames <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  main <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  fontsize_row <span class="op">=</span> <span class="va">fontsize</span>,</span>
+<span>  fontsize_col <span class="op">=</span> <span class="va">fontsize</span>,</span>
+<span>  angle_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"270"</span>, <span class="st">"0"</span>, <span class="st">"45"</span>, <span class="st">"90"</span>, <span class="st">"315"</span><span class="op">)</span>,</span>
+<span>  display_numbers <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  number_format <span class="op">=</span> <span class="st">"%.2f"</span>,</span>
+<span>  number_color <span class="op">=</span> <span class="st">"grey30"</span>,</span>
+<span>  fontsize_number <span class="op">=</span> <span class="fl">0.8</span> <span class="op">*</span> <span class="va">fontsize</span>,</span>
+<span>  width <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  height <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  silent <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 

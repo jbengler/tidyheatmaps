@@ -2,8 +2,8 @@ pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  tidyheatmap: tidyheatmap.html
-last_built: 2024-01-23T20:26Z
+  tidyheatmaps: tidyheatmaps.html
+last_built: 2024-02-12T10:31Z
 urls:
   reference: https://jbengler.github.io/tidyheatmaps/reference
   article: https://jbengler.github.io/tidyheatmaps/articles

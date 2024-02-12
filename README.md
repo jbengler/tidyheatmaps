@@ -27,7 +27,7 @@ found [here](https://jbengler.github.io/tidyheatmaps/).
 ``` r
 library(tidyheatmaps)
 
-tidy_heatmap(data_exprs,
+tidyheatmap(data_exprs,
              rows = external_gene_name,
              columns = sample,
              values = expression,

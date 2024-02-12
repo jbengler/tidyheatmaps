@@ -34,7 +34,7 @@ Given a tidy data frame of gene expression data like `data_exprs`, you can easil
 ```{r fig.retina=2}
 library(tidyheatmaps)
 
-tidy_heatmap(data_exprs,
+tidyheatmap(data_exprs,
              rows = external_gene_name,
              columns = sample,
              values = expression,

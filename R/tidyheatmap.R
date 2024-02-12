@@ -55,11 +55,10 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' Create heatmap from tidy data
 #'
 #' A tidyverse-style interface to the powerful heatmap package
-#' [pheatmap](https://github.com/raivokolde/pheatmap)
-#' by [\@raivokolde](https://github.com/raivokolde).
+#' [pheatmap](https://github.com/raivokolde/pheatmap).
 #' It enables the convenient generation of complex heatmaps from tidy data.
 #'
-#' * `tidy_heatmap()` requires tidy data in long format, see [tidyverse](https://tidyr.tidyverse.org/index.html).
+#' * `tidyheatmap()` requires tidy data in long format, see [tidyverse](https://tidyr.tidyverse.org/index.html).
 #' * For more documentation also look into the [Get started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html) guide.
 #'
 #' @param df A tidy dataframe in long format.
@@ -91,7 +90,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #'
 #' @examples
 #' # Basic example
-#' tidy_heatmap(data_exprs,
+#' tidyheatmap(data_exprs,
 #'              rows = external_gene_name,
 #'              columns = sample,
 #'              values = expression,
@@ -99,7 +98,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' )
 #'
 #' # Change number of colors in color lengend
-#' tidy_heatmap(data_exprs,
+#' tidyheatmap(data_exprs,
 #'              rows = external_gene_name,
 #'              columns = sample,
 #'              values = expression,
@@ -108,7 +107,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' )
 #'
 #' # Change color in color legend
-#' tidy_heatmap(data_exprs,
+#' tidyheatmap(data_exprs,
 #'              rows = external_gene_name,
 #'              columns = sample,
 #'              values = expression,
@@ -117,7 +116,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' )
 #'
 #' # Add row and column annotation
-#' tidy_heatmap(data_exprs,
+#' tidyheatmap(data_exprs,
 #'              rows = external_gene_name,
 #'              columns = sample,
 #'              values = expression,
@@ -127,7 +126,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #' )
 #'
 #' # Add gaps between rows and columns
-#' tidy_heatmap(data_exprs,
+#' tidyheatmap(data_exprs,
 #'              rows = external_gene_name,
 #'              columns = sample,
 #'              values = expression,
@@ -138,7 +137,7 @@ wrangle_data <- function(df, rows, columns, values, annotation_row = NULL, annot
 #'              gaps_col = group
 #' )
 #'
-tidy_heatmap <- function(df,
+tidyheatmap <- function(df,
                          rows,
                          columns,
                          values,

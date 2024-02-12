@@ -16,6 +16,9 @@
     <loc>https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html</loc>
   </url>
   <url>
+    <loc>https://jbengler.github.io/tidyheatmaps/articles/tidyheatmaps.html</loc>
+  </url>
+  <url>
     <loc>https://jbengler.github.io/tidyheatmaps/authors.html</loc>
   </url>
   <url>
@@ -32,5 +35,8 @@
   </url>
   <url>
     <loc>https://jbengler.github.io/tidyheatmaps/reference/tidy_heatmap.html</loc>
+  </url>
+  <url>
+    <loc>https://jbengler.github.io/tidyheatmaps/reference/tidyheatmap.html</loc>
   </url>
 </urlset>

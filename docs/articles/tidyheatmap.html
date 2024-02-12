@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tidyheatmaps</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +99,7 @@ generation of complex heatmaps from tidy data with minimal code.</p>
 <div class="section level2">
 <h2 id="data-requirements">Data requirements<a class="anchor" aria-label="anchor" href="#data-requirements"></a>
 </h2>
-<p><code><a href="../reference/tidy_heatmap.html">tidy_heatmap()</a></code> requires tidy data in long format, see <a href="https://tidyr.tidyverse.org/index.html" class="external-link">tidyverse</a>.</p>
+<p><code><a href="../reference/tidyheatmap.html">tidyheatmap()</a></code> requires tidy data in long format, see <a href="https://tidyr.tidyverse.org/index.html" class="external-link">tidyverse</a>.</p>
 <p>As an example we will use the gene expression data set
 <code>data_exprs</code>. In the tidyverse lingo the columns of a data
 frame are called <em>variables</em>. The variable
@@ -130,7 +130,7 @@ think of them like aesthetics in <code><a href="https://ggplot2.tidyverse.org/re
 to something like
 <code>aes(x = columns, y = rows, fill = values)</code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span></span>
@@ -144,7 +144,7 @@ to something like
 for <code>"row"</code> or <code>"column"</code>. By default data scaling
 is turned off <code>scale = "none"</code>.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -161,7 +161,7 @@ columns alphabetically, just use the <code><a href="https://dplyr.tidyverse.org/
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">data_exprs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="va">external_gene_name</span>, <span class="va">sample</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span>rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
+<span>  <span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span>rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>               columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>               values <span class="op">=</span> <span class="va">expression</span>,</span>
 <span>               scale <span class="op">=</span> <span class="st">"row"</span></span>
@@ -174,7 +174,7 @@ columns alphabetically, just use the <code><a href="https://dplyr.tidyverse.org/
 <p>You can customize the number of colors <code>color_legend_n</code> in
 the color legend. The default is <em>15</em>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -187,7 +187,7 @@ legend. Values smaller then the <code>color_legend_min</code> will have
 the lowest color, values bigger than the <code>color_legend_max</code>
 will get the highest color.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -202,7 +202,7 @@ The number of <code>colors</code> you provide does not have to match
 to have <code>color_legend_n</code> colors (the default is
 <em>15</em>).</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -221,7 +221,7 @@ corresponding variables in the tidy data frame. If you want more then
 one variable for annotation just combine them by
 <code>c(var1, var2, var3)</code>.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -244,7 +244,7 @@ annotations colors <code>annotation_colors</code>.</p>
 <span>  is_immune_gene <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>yes <span class="op">=</span> <span class="st">"#B69340"</span>, no <span class="op">=</span> <span class="st">"#FFFFFF"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -263,7 +263,7 @@ annotations colors <code>annotation_colors</code>.</p>
 used to generate the gaps. Only one variable can be chosen for each
 <code>gaps_row</code> and <code>gaps_col</code>.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -282,7 +282,7 @@ used to generate the gaps. Only one variable can be chosen for each
 <p>You can provide absolute cell dimensions (in points) via the
 <code>cellwidth</code> and <code>cellheight</code> parameters.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -304,7 +304,7 @@ used to generate the gaps. Only one variable can be chosen for each
 rest, you can use <code>show_selected_row_labels</code> or
 <code>show_selected_col_labels</code>, respectively.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -326,7 +326,7 @@ rest, you can use <code>show_selected_row_labels</code> or
 <p>You can use the parameter <code>filename</code> to write the heatmap
 to file.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -339,9 +339,9 @@ to file.</p>
 <p><a href="https://github.com/raivokolde/pheatmap" class="external-link">pheatmap</a>
 provides even more features like clustering, dendrograms, text within
 cells, <em>et cetera</em>. Additional available parameters can be found
-in the documentation of <code><a href="../reference/tidy_heatmap.html">tidy_heatmap()</a></code>.</p>
+in the documentation of <code><a href="../reference/tidyheatmap.html">tidyheatmap()</a></code>.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidy_heatmap.html">tidy_heatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
 <span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>             columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>             values <span class="op">=</span> <span class="va">expression</span>,</span>
