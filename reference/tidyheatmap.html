@@ -126,11 +126,13 @@ It enables the convenient generation of complex heatmaps from tidy data.</p>
 
 
 <dt>rows, columns</dt>
-<dd><p>Column in the dataframe to use for heatmap <code>rows</code> and <code>columns</code>.</p></dd>
+<dd><p>Column in the dataframe to use for heatmap <code>rows</code> and
+<code>columns</code>.</p></dd>
 
 
 <dt>values</dt>
-<dd><p>Column in the dataframe containing the values to be color coded in the heatmap cells.</p></dd>
+<dd><p>Column in the dataframe containing the values to be color coded
+in the heatmap cells.</p></dd>
 
 
 <dt>colors</dt>
@@ -143,7 +145,8 @@ It enables the convenient generation of complex heatmaps from tidy data.</p>
 
 <dt>color_legend_min, color_legend_max</dt>
 <dd><p>Min and max value of the color legend.
-Values smaller then the <code>color_legend_min</code> will have the lowest color, <code>values</code> bigger than the <code>color_legend_max</code> will get the highest color.</p></dd>
+Values smaller then the <code>color_legend_min</code> will have the lowest color,
+<code>values</code> bigger than the <code>color_legend_max</code> will get the highest color.</p></dd>
 
 
 <dt>color_na</dt>
@@ -151,16 +154,19 @@ Values smaller then the <code>color_legend_min</code> will have the lowest color
 
 
 <dt>annotation_row, annotation_col</dt>
-<dd><p>Column(s) in the dataframe to use for <code>row</code> and <code>column</code> annotation.
+<dd><p>Column(s) in the dataframe to use for
+<code>row</code> and <code>column</code> annotation.
 To use multiple columns for annotation combine then by <code>c(column1, column2)</code>.</p></dd>
 
 
 <dt>gaps_row, gaps_col</dt>
-<dd><p>Column in the dataframe to use for use for <code>row</code> and <code>column</code> gaps.</p></dd>
+<dd><p>Column in the dataframe to use for use for <code>row</code> and
+<code>column</code> gaps.</p></dd>
 
 
 <dt>show_selected_row_labels, show_selected_col_labels</dt>
-<dd><p>Only display a subset of selected labels for <code>rows</code> and <code>columns</code>.
+<dd><p>Only display a
+subset of selected labels for <code>rows</code> and <code>columns</code>.
 Provide selected labels as <code>c("label1", "label2")</code>.</p></dd>
 
 
@@ -354,67 +360,71 @@ notation (see more in <code><a href="https://rdrr.io/r/base/sprintf.html" class=
 <p>Invisibly a <code>pheatmap</code> object that is a list with components</p><ul><li><p><code>tree_row</code> the clustering of rows as <code>hclust</code> object</p></li>
 <li><p><code>tree_col</code> the clustering of columns as <code>hclust</code> object</p></li>
 <li><p><code>kmeans</code> the kmeans clustering of rows if parameter <code>kmeans_k</code> was specified</p></li>
-<li><p><code>gtable</code> a <code>gtable</code> object containing the heatmap, can be used for combining the heatmap with other plots</p></li>
+<li><p><code>gtable</code> a <code>gtable</code> object containing the heatmap, can be used for combining
+the heatmap with other plots</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     
-<ul><li><p><code>tidyheatmap()</code> requires tidy data in long format, see <a href="https://tidyr.tidyverse.org/index.html" class="external-link">tidyverse</a>.</p></li>
-<li><p>For more documentation also look into the <a href="https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html">Get started</a> guide.</p></li>
+<ul><li><p><code>tidyheatmap()</code> requires tidy data in long format, see
+<a href="https://tidyr.tidyverse.org/index.html" class="external-link">tidyverse</a>.</p></li>
+<li><p>For more documentation also look into the
+<a href="https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html">Get started</a>
+guide.</p></li>
 </ul></div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Basic example</span></span></span>
 <span class="r-in"><span><span class="fu">tidyheatmap</span><span class="op">(</span><span class="va">data_exprs</span>,</span></span>
-<span class="r-in"><span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
-<span class="r-in"><span>             columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
-<span class="r-in"><span>             values <span class="op">=</span> <span class="va">expression</span>,</span></span>
-<span class="r-in"><span>             scale <span class="op">=</span> <span class="st">"row"</span></span></span>
+<span class="r-in"><span>            rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
+<span class="r-in"><span>            columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
+<span class="r-in"><span>            values <span class="op">=</span> <span class="va">expression</span>,</span></span>
+<span class="r-in"><span>            scale <span class="op">=</span> <span class="st">"row"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="tidyheatmap-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Change number of colors in color lengend</span></span></span>
 <span class="r-in"><span><span class="fu">tidyheatmap</span><span class="op">(</span><span class="va">data_exprs</span>,</span></span>
-<span class="r-in"><span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
-<span class="r-in"><span>             columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
-<span class="r-in"><span>             values <span class="op">=</span> <span class="va">expression</span>,</span></span>
-<span class="r-in"><span>             scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
-<span class="r-in"><span>             color_legend_n <span class="op">=</span> <span class="fl">5</span></span></span>
+<span class="r-in"><span>            rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
+<span class="r-in"><span>            columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
+<span class="r-in"><span>            values <span class="op">=</span> <span class="va">expression</span>,</span></span>
+<span class="r-in"><span>            scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
+<span class="r-in"><span>            color_legend_n <span class="op">=</span> <span class="fl">5</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="tidyheatmap-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Change color in color legend</span></span></span>
 <span class="r-in"><span><span class="fu">tidyheatmap</span><span class="op">(</span><span class="va">data_exprs</span>,</span></span>
-<span class="r-in"><span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
-<span class="r-in"><span>             columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
-<span class="r-in"><span>             values <span class="op">=</span> <span class="va">expression</span>,</span></span>
-<span class="r-in"><span>             scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
-<span class="r-in"><span>             colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#145afc"</span>,<span class="st">"#ffffff"</span>,<span class="st">"#ee4445"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>            rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
+<span class="r-in"><span>            columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
+<span class="r-in"><span>            values <span class="op">=</span> <span class="va">expression</span>,</span></span>
+<span class="r-in"><span>            scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
+<span class="r-in"><span>            colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#145afc"</span>,<span class="st">"#ffffff"</span>,<span class="st">"#ee4445"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="tidyheatmap-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Add row and column annotation</span></span></span>
 <span class="r-in"><span><span class="fu">tidyheatmap</span><span class="op">(</span><span class="va">data_exprs</span>,</span></span>
-<span class="r-in"><span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
-<span class="r-in"><span>             columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
-<span class="r-in"><span>             values <span class="op">=</span> <span class="va">expression</span>,</span></span>
-<span class="r-in"><span>             scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
-<span class="r-in"><span>             annotation_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">sample_type</span>, <span class="va">condition</span>, <span class="va">group</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>             annotation_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">is_immune_gene</span>, <span class="va">direction</span><span class="op">)</span></span></span>
+<span class="r-in"><span>            rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
+<span class="r-in"><span>            columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
+<span class="r-in"><span>            values <span class="op">=</span> <span class="va">expression</span>,</span></span>
+<span class="r-in"><span>            scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
+<span class="r-in"><span>            annotation_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">sample_type</span>, <span class="va">condition</span>, <span class="va">group</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>            annotation_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">is_immune_gene</span>, <span class="va">direction</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="tidyheatmap-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Add gaps between rows and columns</span></span></span>
 <span class="r-in"><span><span class="fu">tidyheatmap</span><span class="op">(</span><span class="va">data_exprs</span>,</span></span>
-<span class="r-in"><span>             rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
-<span class="r-in"><span>             columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
-<span class="r-in"><span>             values <span class="op">=</span> <span class="va">expression</span>,</span></span>
-<span class="r-in"><span>             scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
-<span class="r-in"><span>             annotation_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">sample_type</span>, <span class="va">condition</span>, <span class="va">group</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>             annotation_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">is_immune_gene</span>, <span class="va">direction</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>             gaps_row <span class="op">=</span> <span class="va">direction</span>,</span></span>
-<span class="r-in"><span>             gaps_col <span class="op">=</span> <span class="va">group</span></span></span>
+<span class="r-in"><span>            rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span></span>
+<span class="r-in"><span>            columns <span class="op">=</span> <span class="va">sample</span>,</span></span>
+<span class="r-in"><span>            values <span class="op">=</span> <span class="va">expression</span>,</span></span>
+<span class="r-in"><span>            scale <span class="op">=</span> <span class="st">"row"</span>,</span></span>
+<span class="r-in"><span>            annotation_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">sample_type</span>, <span class="va">condition</span>, <span class="va">group</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>            annotation_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">is_immune_gene</span>, <span class="va">direction</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>            gaps_row <span class="op">=</span> <span class="va">direction</span>,</span></span>
+<span class="r-in"><span>            gaps_col <span class="op">=</span> <span class="va">group</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="tidyheatmap-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
