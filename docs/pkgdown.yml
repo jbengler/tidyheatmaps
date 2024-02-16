@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   tidyheatmaps: tidyheatmaps.html
-last_built: 2024-02-12T10:31Z
+last_built: 2024-02-16T20:20Z
 urls:
   reference: https://jbengler.github.io/tidyheatmaps/reference
   article: https://jbengler.github.io/tidyheatmaps/articles

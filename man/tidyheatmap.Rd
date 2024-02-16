@@ -2,6 +2,7 @@
 % Please edit documentation in R/tidyheatmap.R
 \name{tidyheatmap}
 \alias{tidyheatmap}
+\alias{tidy_heatmap}
 \title{Create heatmap from tidy data}
 \usage{
 tidyheatmap(
@@ -65,25 +66,31 @@ tidyheatmap(
 \arguments{
 \item{df}{A tidy dataframe in long format.}
 
-\item{rows, columns}{Column in the dataframe to use for heatmap \code{rows} and \code{columns}.}
+\item{rows, columns}{Column in the dataframe to use for heatmap \code{rows} and
+\code{columns}.}
 
-\item{values}{Column in the dataframe containing the values to be color coded in the heatmap cells.}
+\item{values}{Column in the dataframe containing the values to be color coded
+in the heatmap cells.}
 
 \item{colors}{Vector of colors used for the color legend.}
 
 \item{color_legend_n}{Number of colors in the color legend.}
 
 \item{color_legend_min, color_legend_max}{Min and max value of the color legend.
-Values smaller then the \code{color_legend_min} will have the lowest color, \code{values} bigger than the \code{color_legend_max} will get the highest color.}
+Values smaller then the \code{color_legend_min} will have the lowest color,
+\code{values} bigger than the \code{color_legend_max} will get the highest color.}
 
 \item{color_na}{Color to use for \code{NAs} in \code{values}.}
 
-\item{annotation_row, annotation_col}{Column(s) in the dataframe to use for \code{row} and \code{column} annotation.
+\item{annotation_row, annotation_col}{Column(s) in the dataframe to use for
+\code{row} and \code{column} annotation.
 To use multiple columns for annotation combine then by \code{c(column1, column2)}.}
 
-\item{gaps_row, gaps_col}{Column in the dataframe to use for use for \code{row} and \code{column} gaps.}
+\item{gaps_row, gaps_col}{Column in the dataframe to use for use for \code{row} and
+\code{column} gaps.}
 
-\item{show_selected_row_labels, show_selected_col_labels}{Only display a subset of selected labels for \code{rows} and \code{columns}.
+\item{show_selected_row_labels, show_selected_col_labels}{Only display a
+subset of selected labels for \code{rows} and \code{columns}.
 Provide selected labels as \code{c("label1", "label2")}.}
 
 \item{filename}{file path where to save the picture. Filetype is decided by 
@@ -199,7 +206,8 @@ Invisibly a \code{pheatmap} object that is a list with components
 \item \code{tree_row} the clustering of rows as \code{hclust} object
 \item \code{tree_col} the clustering of columns as \code{hclust} object
 \item \code{kmeans} the kmeans clustering of rows if parameter \code{kmeans_k} was specified
-\item \code{gtable} a \code{gtable} object containing the heatmap, can be used for combining the heatmap with other plots
+\item \code{gtable} a \code{gtable} object containing the heatmap, can be used for combining
+the heatmap with other plots
 }
 }
 \description{
@@ -209,57 +217,60 @@ It enables the convenient generation of complex heatmaps from tidy data.
 }
 \details{
 \itemize{
-\item \code{tidyheatmap()} requires tidy data in long format, see \href{https://tidyr.tidyverse.org/index.html}{tidyverse}.
-\item For more documentation also look into the \href{https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html}{Get started} guide.
+\item \code{tidyheatmap()} requires tidy data in long format, see
+\href{https://tidyr.tidyverse.org/index.html}{tidyverse}.
+\item For more documentation also look into the
+\href{https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html}{Get started}
+guide.
 }
 }
 \examples{
 # Basic example
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row"
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row"
 )
 
 # Change number of colors in color lengend
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             color_legend_n = 5
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            color_legend_n = 5
 )
 
 # Change color in color legend
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             colors = c("#145afc","#ffffff","#ee4445")
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            colors = c("#145afc","#ffffff","#ee4445")
 )
 
 # Add row and column annotation
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction)
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction)
 )
 
 # Add gaps between rows and columns
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             gaps_row = direction,
-             gaps_col = group
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            gaps_row = direction,
+            gaps_col = group
 )
 
 }

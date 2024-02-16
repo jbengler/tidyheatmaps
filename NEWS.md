@@ -1,6 +1,7 @@
 # tidyheatmaps 0.2.0
 
-* The function `tidy_heatmap()` has been renamed to `tidyheatmap()`.
+* `tidy_heatmap()` was renamed to `tidyheatmap()`. `tidy_heatmap()` still works, 
+but will be deprecated in the future.
 
 # tidyheatmaps 0.1.0
 

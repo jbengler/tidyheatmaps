@@ -23,8 +23,8 @@ tidyheatmaps simplifies the generation of publication-ready heatmaps from tidy d
 ## Installation
 
 ``` r
-# install.packages("pak")
-pak::pak("jbengler/tidyheatmaps")
+# install.packages("devtools")
+devtools::install_github("jbengler/tidyheatmaps")
 ```
 
 ## Usage
@@ -35,14 +35,14 @@ Given a tidy data frame of gene expression data like `data_exprs`, you can easil
 library(tidyheatmaps)
 
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             gaps_row = direction,
-             gaps_col = group
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            gaps_row = direction,
+            gaps_col = group
 )
 ```
 

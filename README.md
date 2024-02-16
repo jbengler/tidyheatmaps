@@ -14,8 +14,8 @@ for the effortless creation of intricate heatmaps with minimal code.
 ## Installation
 
 ``` r
-# install.packages("pak")
-pak::pak("jbengler/tidyheatmaps")
+# install.packages("devtools")
+devtools::install_github("jbengler/tidyheatmaps")
 ```
 
 ## Usage
@@ -28,14 +28,14 @@ found [here](https://jbengler.github.io/tidyheatmaps/).
 library(tidyheatmaps)
 
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             gaps_row = direction,
-             gaps_col = group
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            gaps_row = direction,
+            gaps_col = group
 )
 ```
 

@@ -45,9 +45,9 @@ The basic layout of the heatmap relies on the parameters `rows`, `columns` and `
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression
+            rows = external_gene_name,
+            columns = sample,
+            values = expression
 )
 ```
 
@@ -57,10 +57,10 @@ With the parameter `scale` you can activate data scaling for `"row"` or `"column
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row"
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row"
 )
 ```
 
@@ -72,9 +72,9 @@ Rows and columns in the heatmap will appear in the same order as in the tidy dat
 data_exprs %>% 
   arrange(external_gene_name, sample) %>% 
   tidyheatmap(rows = external_gene_name,
-               columns = sample,
-               values = expression,
-               scale = "row"
+              columns = sample,
+              values = expression,
+              scale = "row"
   )
 ```
 
@@ -84,11 +84,11 @@ You can customize the number of colors `color_legend_n` in the color legend. The
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             color_legend_n = 5
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            color_legend_n = 5
 )
 ```
 
@@ -97,12 +97,12 @@ Values smaller then the `color_legend_min` will have the lowest color, values bi
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             color_legend_min = -1,
-             color_legend_max = 1
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            color_legend_min = -1,
+            color_legend_max = 1
 )
 ```
 
@@ -110,11 +110,11 @@ Of course, you can also change the `colors` themselves. The number of `colors` y
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             colors = c("#145afc","#ffffff","#ee4445")
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            colors = c("#145afc","#ffffff","#ee4445")
 )
 ```
 
@@ -124,12 +124,12 @@ Annotations can be added for both `rows` and `columns` via `annotation_row` and 
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction)
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction)
 )
 ```
 
@@ -147,13 +147,13 @@ ann_colors <- list(
 )
 
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             annotation_colors = ann_colors
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            annotation_colors = ann_colors
 )
 ```
 
@@ -163,15 +163,15 @@ Gaps can be added by specifying data frame variables that should be used to gene
 
 ```{r}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             annotation_colors = ann_colors,
-             gaps_row = direction,
-             gaps_col = group
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            annotation_colors = ann_colors,
+            gaps_row = direction,
+            gaps_col = group
 )
 ```
 
@@ -181,17 +181,17 @@ You can provide absolute cell dimensions (in points) via the `cellwidth` and `ce
 
 ```{r fig.asp=0.8}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             annotation_colors = ann_colors,
-             gaps_row = direction,
-             gaps_col = group,
-             cellwidth = 7,
-             cellheight = 7
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            annotation_colors = ann_colors,
+            gaps_row = direction,
+            gaps_col = group,
+            cellwidth = 7,
+            cellheight = 7
 )
 ```
 
@@ -201,18 +201,18 @@ To highlight a selection of row or column labels while hiding the rest, you can 
 
 ```{r fig.asp=0.8}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             annotation_col = c(sample_type, condition, group),
-             annotation_row = c(is_immune_gene, direction),
-             annotation_colors = ann_colors,
-             gaps_row = direction,
-             gaps_col = group,
-             cellwidth = 7,
-             cellheight = 7,
-             show_selected_row_labels = c("Apol6","Bsn","Vgf","Fam96b","Bag1","Aip"),
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            annotation_colors = ann_colors,
+            gaps_row = direction,
+            gaps_col = group,
+            cellwidth = 7,
+            cellheight = 7,
+            show_selected_row_labels = c("Apol6","Bsn","Vgf","Fam96b","Bag1","Aip"),
 )
 ```
 
@@ -222,10 +222,10 @@ You can use the parameter `filename` to write the heatmap to file.
 
 ```{r fig.asp=0.8, eval=FALSE}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             filename = "my_heatmap.pdf"
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            filename = "my_heatmap.pdf"
 )
 ```
 
@@ -235,12 +235,12 @@ tidyheatmap(data_exprs,
 
 ```{r fig.asp=0.9}
 tidyheatmap(data_exprs,
-             rows = external_gene_name,
-             columns = sample,
-             values = expression,
-             scale = "row",
-             cluster_rows = TRUE,
-             cluster_cols = TRUE,
-             display_numbers = TRUE
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            cluster_rows = TRUE,
+            cluster_cols = TRUE,
+            display_numbers = TRUE
 )
 ```
