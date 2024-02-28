@@ -4,6 +4,8 @@
 # tidyheatmaps <img src="man/figures/logo.svg" align="right" height="139" alt="" />
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/jbengler/tidyheatmaps/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jbengler/tidyheatmaps/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 tidyheatmaps simplifies the generation of publication-ready heatmaps
