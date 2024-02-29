@@ -215,15 +215,6 @@ A tidyverse-style interface to the powerful heatmap package
 \href{https://github.com/raivokolde/pheatmap}{pheatmap}.
 It enables the convenient generation of complex heatmaps from tidy data.
 }
-\details{
-\itemize{
-\item \code{tidyheatmap()} requires tidy data in long format, see
-\href{https://tidyr.tidyverse.org/index.html}{tidyverse}.
-\item For more documentation also look into the
-\href{https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html}{Get started}
-guide.
-}
-}
 \examples{
 # Basic example
 tidyheatmap(data_exprs,

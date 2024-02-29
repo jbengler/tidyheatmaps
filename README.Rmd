@@ -19,10 +19,16 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/jbengler/tidyheatmaps/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jbengler/tidyheatmaps/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-tidyheatmaps simplifies the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful [pheatmap](https://github.com/raivokolde/pheatmap) package, it allows for the effortless creation of intricate heatmaps with minimal code.
+The goal of tidyheatmaps is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful pheatmap package, it allows for the effortless creation of intricate heatmaps with minimal code. By offering an interface to the powerful [pheatmap](https://github.com/raivokolde/pheatmap) package, it allows for the effortless creation of intricate heatmaps with minimal code.
 
 ## Installation
 
+You can install the released version of tidyheatmaps from [CRAN](https://cran.r-project.org/) with:
+``` r
+install.packages("tidyheatmaps")
+```
+
+And the development version from [GitHub](https://github.com/) with:
 ``` r
 # install.packages("devtools")
 devtools::install_github("jbengler/tidyheatmaps")

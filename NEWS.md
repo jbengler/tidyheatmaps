@@ -1,3 +1,7 @@
+# tidyheatmaps 0.2.1
+
+* Minor adjustments for CRAN submission.
+
 # tidyheatmaps 0.2.0
 
 * `tidy_heatmap()` was renamed to `tidyheatmap()`. `tidy_heatmap()` still works, 

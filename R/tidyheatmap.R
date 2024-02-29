@@ -4,12 +4,6 @@
 #' [pheatmap](https://github.com/raivokolde/pheatmap).
 #' It enables the convenient generation of complex heatmaps from tidy data.
 #'
-#' * `tidyheatmap()` requires tidy data in long format, see
-#' [tidyverse](https://tidyr.tidyverse.org/index.html).
-#' * For more documentation also look into the
-#' [Get started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmap.html)
-#' guide.
-#'
 #' @param df A tidy dataframe in long format.
 #'
 #' @param rows,columns Column in the dataframe to use for heatmap `rows` and
