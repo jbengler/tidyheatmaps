@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/jbengler/tidyheatmaps/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jbengler/tidyheatmaps/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/tidyheatmaps)](https://CRAN.R-project.org/package=tidyheatmaps)
 <!-- badges: end -->
 
 The goal of tidyheatmaps is to simplify the generation of

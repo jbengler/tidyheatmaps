@@ -1,6 +1,6 @@
 Package: tidyheatmaps
 Title: Heatmaps from Tidy Data
-Version: 0.2.1
+Version: 0.2.1.9000
 Authors@R: 
     person(given = "Jan Broder",
            family = "Engler",
