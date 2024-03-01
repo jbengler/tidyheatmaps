@@ -10,13 +10,10 @@
 status](https://www.r-pkg.org/badges/version/tidyheatmaps)](https://CRAN.R-project.org/package=tidyheatmaps)
 <!-- badges: end -->
 
-The goal of tidyheatmaps is to simplify the generation of
+The goal of `tidyheatmaps` is to simplify the generation of
 publication-ready heatmaps from tidy data. By offering an interface to
-the powerful pheatmap package, it allows for the effortless creation of
-intricate heatmaps with minimal code. By offering an interface to the
-powerful [pheatmap](https://github.com/raivokolde/pheatmap) package, it
-allows for the effortless creation of intricate heatmaps with minimal
-code.
+the powerful `pheatmap` package, it allows for the effortless creation
+of intricate heatmaps with minimal code.
 
 ## Installation
 
