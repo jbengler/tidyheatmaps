@@ -6,7 +6,8 @@ tags:
   - heatmaps
   - tidy data
 authors:
-  - name: Jan Broder Engler
+  - given-names: Jan Broder
+    surname: Engler
     orcid: 0000-0002-3169-2076
     affiliation: 1
 affiliations:
@@ -64,12 +65,10 @@ citation) then you can do it with the example BibTeX entry below for @fidgit.
 
 # Figures
 
-Figures can be included like this:
-![Caption for example figure.\label{fig:example}](man/figures/README-unnamed-chunk-2-1.png)
-and referenced from text using \autoref{fig:example}.
+Figures can be included and referenced from text using \autoref{fig:example}.
 
-Figure sizes can be customized by adding an optional second parameter:
-![Caption for example figure.](man/figures/README-unnamed-chunk-2-1.png){ width=20% }
+![Caption for example figure.\label{fig:example}](man/figures/README-unnamed-chunk-2-1.png)
+
 
 # Acknowledgements
 
