@@ -16,6 +16,7 @@ date: 12 March 2024
 bibliography: paper.bib
 ---
 
+
 # Summary
 
 The goal of 'tidyheatmaps' is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful 'pheatmap' package, it allows for the effortless creation of intricate heatmaps with minimal code.
