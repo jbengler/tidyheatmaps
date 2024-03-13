@@ -31,6 +31,12 @@ And the development version from [GitHub](https://github.com/) with:
 devtools::install_github("jbengler/tidyheatmaps")
 ```
 
+## Contribution
+
+If you wish to contribute to the software, report any issues or
+problems, or seek support, please feel free to open an issue
+[here](https://github.com/jbengler/tidyheatmaps/issues).
+
 ## Usage
 
 Given a tidy data frame of gene expression data like `data_exprs`, you
@@ -40,7 +46,7 @@ found [here](https://jbengler.github.io/tidyheatmaps/).
 ``` r
 library(tidyheatmaps)
 
-tidyheatmap(data_exprs,
+tidyheatmap(df = data_exprs,
             rows = external_gene_name,
             columns = sample,
             values = expression,

@@ -14,7 +14,7 @@ comment = "#>"
 )
 ```
 
-Within the `tidyverse` heatmaps can be generated via `ggplot2::geom_tile()` but is sometimes hard to reach the versatility and beauty of a genuine heatmap function. `tidyheatmaps` provides a tidyverse-style interface to the powerful heatmap package [pheatmap](https://github.com/raivokolde/pheatmap) by [\@raivokolde](https://github.com/raivokolde) and enables the generation of complex heatmaps from tidy data with minimal code. 
+Within the `tidyverse` heatmaps can be generated via `ggplot2::geom_tile()` but is sometimes hard to reach the versatility and beauty of a genuine heatmap function. `tidyheatmaps` provides a tidyverse-style interface to the powerful [pheatmap](https://github.com/raivokolde/pheatmap) package and enables the generation of complex heatmaps from tidy data with minimal code.
 
 ```{r include=FALSE}
 library(dplyr)
