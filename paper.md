@@ -32,7 +32,7 @@ As such, `tidyheatmaps` tries to solve a similar problem as the `tidyHeatmap` pa
 
 # Usage
 
-The main input to the `tidyheatmap()` function is a tidy data frame. The arguments `rows`, `columns` and `values` are used to select those variables from the data frame that should be used to represent rows, columns and colored values, respectively. Several additional arguments can be used to customize heatmap properties including scaling, order, annotation, gaps, and colors (\autoref{fig:example}) and to export the heatmap to file.
+The main input to the `tidyheatmap()` function is a tidy data frame. The arguments `rows`, `columns` and `values` are used to select those variables from the data frame that should be used to represent rows, columns and colored values, respectively. Several additional arguments can be used to customize heatmap properties including scaling, order, annotation, gaps, and colors (\autoref{fig:example}) and to export the heatmap to file. A detailed guide to [Get started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmaps.html) as well as the [Full documentation](https://jbengler.github.io/tidyheatmaps/index.html) can be found on GitHub.
 
 ``` r
 library(tidyheatmaps)
