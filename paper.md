@@ -38,14 +38,29 @@ performing numerical orbit integration).
 enables wrapping low-level languages (e.g., C) for speed without losing
 flexibility or ease-of-use in the user-interface. The API for `Gala` was
 designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of [@Engler.2019] common operations such as gravitational
+Cython-optimized) implementations of common operations such as gravitational
 potential and force evaluation, orbit integration, dynamical transformations,
 and chaos indicators for nonlinear dynamics. `Gala` also relies heavily on and
 interfaces well with the implementations of physical units and astronomical
 coordinate systems in the `Astropy` package [@Winkler.2023] (`astropy.units` and
 `astropy.coordinates`).
 
-`Gala` was designed to [@Kolde.2019] be used by both astronomical researchers and by
+The tidyverse [@tidyverse]
+
+
+Matrix-based
+`heatmap()` base R [@base.r]
+`heatmap.2()` from the `gplots` package [@gplots]
+`ComplexHeatmap` [@complexheatmap]
+`pheatmap` [@pheatmap]
+superheat
+
+tidy
+`tidyHeatmap` [@tidyHeatmap] is wrapper around `ComplexHeatmap` [@complexheatmap]
+this package is wrapper around `pheatmap` [@pheatmap]
+
+
+`Gala` was designed pheatmap be used ComplexHeatmap [@complexheatmap] by both astronomical researchers and by
 students in courses on gravitational dynamics or astronomy. It has already been
 used in a number of scientific publications [@Winkler.2023] and has also been
 used in graduate courses on Galactic dynamics to, e.g., provide interactive
