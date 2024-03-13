@@ -22,7 +22,7 @@ bibliography: paper.bib
 
 ![](man/figures/logo.svg){ width=20% }
 
-Heatmaps serve as a means to visually represent a matrix of individual data points through geometric shapes, usually rectangles, with colors representing their respective values. This technique is especially useful to visually explore patterns in large data sets. While a number of R packages exist to generate heatmaps from data matrices, the goal of 'tidyheatmaps' is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful 'pheatmap' package [@pheatmap], it allows for the effortless creation of intricate heatmaps with minimal code.
+Heatmaps serve as a means to visually represent a matrix of individual data points through geometric shapes, usually rectangles, with colors representing their respective values. This technique is especially useful to visually explore patterns in large data sets. While a number of R packages exist to generate heatmaps from data matrices, the goal of `tidyheatmaps` is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful `pheatmap` package [@pheatmap], it allows for the effortless creation of intricate heatmaps with minimal code.
 
 # Statement of need
 
@@ -32,7 +32,7 @@ As such, `tidyheatmaps` tries to solve a similar problem as the `tidyHeatmap` pa
 
 # Usage
 
-The main input to the `tidyheatmap()` function is a tidy data frame. The arguments `rows`, `columns` and `values` are used to select those variables from the data frame that should be used to represent rows, columns and colored values, respectively. Several additional arguments can be used to customize heatmap properties including scaling, order, annotation, gaps, and colors \autoref{fig:example} and to export the heatmap to file.
+The main input to the `tidyheatmap()` function is a tidy data frame. The arguments `rows`, `columns` and `values` are used to select those variables from the data frame that should be used to represent rows, columns and colored values, respectively. Several additional arguments can be used to customize heatmap properties including scaling, order, annotation, gaps, and colors (\autoref{fig:example}) and to export the heatmap to file.
 
 ``` r
 library(tidyheatmaps)
