@@ -50,22 +50,21 @@
 
 <div id="summary" class="section level1">
 
-<p>The goal of ‘tidyheatmaps’ is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful ‘pheatmap’ package, it allows for the effortless creation of intricate heatmaps with minimal code.</p>
-<p>The forces on stars, galaxies, and dark matter under external gravitational fields lead to the dynamical evolution of structures in the universe. The orbits of these bodies are therefore key to understanding the formation, history, and future state of galaxies. The field of “galactic dynamics,” which aims to model the gravitating components of galaxies to study their structure and evolution, is now well-established, commonly taught, and frequently used in astronomy. Aside from toy problems and demonstrations, the majority of problems require efficient numerical tools, many of which require the same base code (e.g., for performing numerical orbit integration).</p>
+<p><img src="reference/figures/logo.svg" style="width:20.0%"></p>
+<p>Heatmaps serve as a means to visually represent a matrix of individual data points through geometric shapes, usually rectangles, with colors representing their respective values. This technique is especially useful to visually explore patterns in large data sets. While a number of R packages exist to generate heatmaps from data matrices, the goal of ‘tidyheatmaps’ is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful ‘pheatmap’ package [@pheatmap], it allows for the effortless creation of intricate heatmaps with minimal code.</p>
 </div>
 <div class="section level1">
 <h1 id="statement-of-need">Statement of need<a class="anchor" aria-label="anchor" href="#statement-of-need"></a></h1>
-<p>Matrix-based <code><a href="https://rdrr.io/r/stats/heatmap.html" class="external-link">heatmap()</a></code> from the <code>stats</code> package [@base.r] <code>heatmap.2()</code> from the <code>gplots</code> package [@gplots] <code>ComplexHeatmap</code> package [@complexheatmap] <code>pheatmap</code> package [@pheatmap] <code>superheat</code> package [@superheat]</p>
-<p>The tidyverse [@tidyverse]</p>
-<p>tidy <code>tidyHeatmap</code> package [@tidyHeatmap] is wrapper around <code>ComplexHeatmap</code> package [@complexheatmap] this package is wrapper around <code>pheatmap</code> package [@pheatmap]</p>
+<p>Classical implementations of heatmaps like <code><a href="https://rdrr.io/r/stats/heatmap.html" class="external-link">heatmap()</a></code> from the <code>stats</code> package [@base.r], <code>heatmap.2()</code> from the <code>gplots</code> package [@gplots], but also specialized heatmap packages including <code>ComplexHeatmap</code> [@complexheatmap], <code>pheatmap</code> [@pheatmap] and <code>superheat</code> [@superheat] rely on a data matrix as the main input. This makes perfect sense because the 2-dimensional representation of values in a heatmap faithfully resembles the structure of a 2-dimensional matrix. However, several popular data science packages that have been bundled in the <code>tidyverse</code> [@tidyverse] favor the use of tidy data frames. This makes perfect sense because data frames are the most versatile data format to feed different data science routines including data wrangling, modeling and visualization. The challenge of constantly going back and forth between matrix and data frame-based work flows, however, causes a lot of friction in daily data analysis and was the main motivation for the development of <code>tidyheatmaps</code>.</p>
+<p>As such, <code>tidyheatmaps</code> tries to solve a similar problem as the <code>tidyHeatmap</code> package [@tidyHeatmap], which is a tidy wrapper around the <code>ComplexHeatmap</code> package [@complexheatmap]. However, <code>tidyheatmaps</code> takes a different approach by providing one powerful work horse function called <code><a href="reference/tidyheatmap.html">tidyheatmap()</a></code> that incorporates all supported customizations in one function call. Moreover, <code>tidyheatmaps</code> uses a different downstream plotting engine [@pheatmap] and focuses on the most common plotting routines thereby avoiding unnecessary complexity. <code>tidyheatmaps</code> has been used in scientific papers to visualize mRNA sequencing [@Rosenkranz.2021] and miRNA sequencing analysis [@Winkler.2023].</p>
 </div>
 <div class="section level1">
 <h1 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a></h1>
-<p>This is how it works</p>
+<p>The main input to the <code><a href="reference/tidyheatmap.html">tidyheatmap()</a></code> function is a tidy data frame. The arguments <code>rows</code>, <code>columns</code> and <code>values</code> are used to select those variables from the data frame that should be used to represent rows, columns and colored values, respectively. Several additional arguments can be used to customize several heatmap properties including scaling, order, annotation, gaps, and colors, and to export the heatmap to file .</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jbengler/tidyheatmaps" class="external-link">tidyheatmaps</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span><span class="va">data_exprs</span>,</span>
+<span><span class="fu"><a href="reference/tidyheatmap.html">tidyheatmap</a></span><span class="op">(</span>df <span class="op">=</span> <span class="va">data_exprs</span>,</span>
 <span>            rows <span class="op">=</span> <span class="va">external_gene_name</span>,</span>
 <span>            columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>            values <span class="op">=</span> <span class="va">expression</span>,</span>
@@ -76,11 +75,8 @@
 <span>            gaps_col <span class="op">=</span> <span class="va">group</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <div class="float">
-<img src="reference/figures/README-unnamed-chunk-2-1.png" alt="Caption for example figure."><div class="figcaption">Caption for example figure.</div>
+<img src="reference/figures/README-unnamed-chunk-2-1.png" alt="A heatmap generated from the example code above."><div class="figcaption">A heatmap generated from the example code above.</div>
 </div>
-<p><code>tidyplots</code> has already been cited in academic papers</p>
-<p>students in courses on gravitational dynamics or astronomy. It has already been used in a number of scientific publications [@Winkler.2023] and has also been used in graduate courses on Galactic dynamics to, e.g., provide interactive visualizations of textbook material [@Rosenkranz.2021]. The combination of speed, design, and support for Astropy functionality in <code>Gala</code> will enable exciting scientific explorations of forthcoming data releases from the <em>Gaia</em> mission by students and experts alike.</p>
-<p>Figures can be included and referenced from text using .</p>
 </div>
 <div class="section level1">
 <h1 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h1>
