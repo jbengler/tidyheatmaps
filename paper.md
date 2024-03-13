@@ -20,41 +20,24 @@ bibliography: paper.bib
 
 # Summary
 
-The goal of 'tidyheatmaps' is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful 'pheatmap' package, it allows for the effortless creation of intricate heatmaps with minimal code.
+![](man/figures/logo.svg){ width=20% }
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
+Heatmaps serve as a means to visually represent a matrix of individual data points through geometric shapes, usually rectangles, with colors representing their respective values. This technique is especially useful to visually explore patterns in large data sets. While a number of R packages exist to generate heatmaps from data matrices, the goal of 'tidyheatmaps' is to simplify the generation of publication-ready heatmaps from tidy data. By offering an interface to the powerful 'pheatmap' package [@pheatmap], it allows for the effortless creation of intricate heatmaps with minimal code.
 
 # Statement of need
 
-Matrix-based
-`heatmap()` from the `stats` package [@base.r]
-`heatmap.2()` from the `gplots` package [@gplots]
-`ComplexHeatmap` package [@complexheatmap]
-`pheatmap` package [@pheatmap]
-`superheat` package [@superheat]
+Classical implementations of heatmaps like `heatmap()` from the `stats` package [@base.r], `heatmap.2()` from the `gplots` package [@gplots], but also specialized heatmap packages including `ComplexHeatmap` [@complexheatmap], `pheatmap` [@pheatmap] and `superheat` [@superheat] rely on a data matrix as the main input. This makes perfect sense because the 2-dimensional representation of values in a heatmap faithfully resembles the structure of a 2-dimensional matrix. However, several popular data science packages that have been bundled in the `tidyverse` [@tidyverse] favor the use of tidy data frames. This makes perfect sense because data frames are the most versatile data format to feed different data science routines including data wrangling, modeling and visualization. The challenge of constantly going back and forth between matrix and data frame-based work flows, however, causes a lot of friction in daily data analysis and was the main motivation for the development of `tidyheatmaps`.
 
-The tidyverse [@tidyverse]
-
-tidy
-`tidyHeatmap` package [@tidyHeatmap] is wrapper around `ComplexHeatmap` package [@complexheatmap]
-this package is wrapper around `pheatmap` package [@pheatmap]
+As such, `tidyheatmaps` tries to solve a similar problem as the `tidyHeatmap` package [@tidyHeatmap], which is a tidy wrapper around the `ComplexHeatmap` package [@complexheatmap]. However, `tidyheatmaps` takes a different approach by providing one powerful work horse function called `tidyheatmap()` that incorporates all supported  customizations in one function call. Moreover, `tidyheatmaps` uses a different downstream plotting engine [@pheatmap] and focuses on the most common plotting routines thereby avoiding unnecessary complexity. `tidyheatmaps` has been used in scientific papers to visualize mRNA sequencing [@Rosenkranz.2021] and miRNA sequencing analysis [@Winkler.2023].
 
 # Usage
 
-This is how it works
+The main input to the `tidyheatmap()` function is a tidy data frame. The arguments `rows`, `columns` and `values` are used to select those variables from the data frame that should be used to represent rows, columns and colored values, respectively. Several additional arguments can be used to customize several heatmap properties including scaling, order, annotation, gaps, and colors, and to export the heatmap to file \autoref{fig:example}.
 
 ``` r
 library(tidyheatmaps)
 
-tidyheatmap(data_exprs,
+tidyheatmap(df = data_exprs,
             rows = external_gene_name,
             columns = sample,
             values = expression,
@@ -66,18 +49,6 @@ tidyheatmap(data_exprs,
 )
 ```
 
-![Caption for example figure.\label{fig:example}](man/figures/README-unnamed-chunk-2-1.png)
-
-`tidyplots` has already been cited in academic papers
-
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Winkler.2023] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Rosenkranz.2021]. The combination of speed,
-design, and support for Astropy functionality in `Gala` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission by students and experts alike.
-
-Figures can be included and referenced from text using \autoref{fig:example}.
-
+![A heatmap generated from the example code above.\label{fig:example}](man/figures/README-unnamed-chunk-2-1.png)
 
 # References
