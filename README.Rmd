@@ -34,13 +34,10 @@ And the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("jbengler/tidyheatmaps")
 ```
-## Contribution
-
-If you wish to contribute to the software, report any issues or problems, or seek support, please feel free to open an issue [here](https://github.com/jbengler/tidyheatmaps/issues).
 
 ## Usage
 
-Given a tidy data frame of gene expression data like `data_exprs`, you can easily generate a customized heatmap. The full documentation can be found [here](https://jbengler.github.io/tidyheatmaps/).
+Given a tidy data frame of gene expression data like `data_exprs`, you can easily generate a customized heatmap. A detailed guide to [Get started](https://jbengler.github.io/tidyheatmaps/articles/tidyheatmaps.html) as well as the [Full documentation](https://jbengler.github.io/tidyheatmaps/index.html) can be found on GitHub.
 
 ```{r fig.retina=2}
 library(tidyheatmaps)
