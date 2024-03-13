@@ -34,33 +34,42 @@ performing numerical orbit integration).
 
 # Statement of need
 
-`Gala` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for `Gala` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. `Gala` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the `Astropy` package [@Winkler.2023] (`astropy.units` and
-`astropy.coordinates`).
+Matrix-based
+`heatmap()` from the `stats` package [@base.r]
+`heatmap.2()` from the `gplots` package [@gplots]
+`ComplexHeatmap` package [@complexheatmap]
+`pheatmap` package [@pheatmap]
+`superheat` package [@superheat]
 
 The tidyverse [@tidyverse]
 
-
-Matrix-based
-`heatmap()` base R [@base.r]
-`heatmap.2()` from the `gplots` package [@gplots]
-`ComplexHeatmap` [@complexheatmap]
-`pheatmap` [@pheatmap]
-superheat
-
 tidy
-`tidyHeatmap` [@tidyHeatmap] is wrapper around `ComplexHeatmap` [@complexheatmap]
-this package is wrapper around `pheatmap` [@pheatmap]
+`tidyHeatmap` package [@tidyHeatmap] is wrapper around `ComplexHeatmap` package [@complexheatmap]
+this package is wrapper around `pheatmap` package [@pheatmap]
 
+# Usage
 
-`Gala` was designed pheatmap be used ComplexHeatmap [@complexheatmap] by both astronomical researchers and by
+This is how it works
+
+``` r
+library(tidyheatmaps)
+
+tidyheatmap(data_exprs,
+            rows = external_gene_name,
+            columns = sample,
+            values = expression,
+            scale = "row",
+            annotation_col = c(sample_type, condition, group),
+            annotation_row = c(is_immune_gene, direction),
+            gaps_row = direction,
+            gaps_col = group
+)
+```
+
+![Caption for example figure.\label{fig:example}](man/figures/README-unnamed-chunk-2-1.png)
+
+`tidyplots` has already been cited in academic papers
+
 students in courses on gravitational dynamics or astronomy. It has already been
 used in a number of scientific publications [@Winkler.2023] and has also been
 used in graduate courses on Galactic dynamics to, e.g., provide interactive
@@ -70,10 +79,5 @@ scientific explorations of forthcoming data releases from the *Gaia* mission by 
 
 Figures can be included and referenced from text using \autoref{fig:example}.
 
-![Caption for example figure.\label{fig:example}](man/figures/README-unnamed-chunk-2-1.png)
-
-# Acknowledgements
-
-We acknowledge contributions from ...
 
 # References
