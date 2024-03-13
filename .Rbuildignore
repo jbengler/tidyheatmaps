@@ -6,9 +6,6 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-^paper\.md$
-^paper\.bib$
-^paper\.pdf$
 ^\.github$
 ^data-raw$
 ^cran-comments\.md$
