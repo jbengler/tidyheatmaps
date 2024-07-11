@@ -1,36 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/404.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/articles/tidyheatmaps.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/reference/data_exprs.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://jbengler.github.io/tidyheatmaps/reference/tidyheatmap.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://jbengler.github.io/tidyheatmaps/404.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/LICENSE-text.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/LICENSE.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/articles/index.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/articles/tidyheatmaps.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/authors.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/index.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/news/index.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/reference/data_exprs.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/reference/index.html</loc></url>
+<url><loc>https://jbengler.github.io/tidyheatmaps/reference/tidyheatmap.html</loc></url>
 </urlset>
+
