@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidyheatmaps <img src="man/figures/logo.svg" align="right" height="139" alt="" />
+# tidyheatmaps <a href="https://jbengler.github.io/tidyheatmaps/"><img src="man/figures/logo.svg" align="right" height="139" alt="tidyheatmaps website" /></a>
 
 <!-- badges: start -->
 
