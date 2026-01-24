@@ -6,12 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Get started • tidyheatmaps</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
@@ -90,15 +89,15 @@ rows.</p>
 <code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">data_exprs</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 800</span></span>
 <span><span class="co">#&gt; Columns: 9</span></span>
-<span><span class="co">#&gt; $ ensembl_gene_id    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ENSMUSG00000033576", "ENSMUSG00000033576", "ENSMUS…</span></span>
-<span><span class="co">#&gt; $ external_gene_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Apol6", "Apol6", "Apol6", "Apol6", "Apol6", "Apol6…</span></span>
-<span><span class="co">#&gt; $ sample             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Hin_1", "Hin_2", "Hin_3", "Hin_4", "Hin_5", "Ein_1…</span></span>
-<span><span class="co">#&gt; $ expression         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 2.203755, 2.203755, 2.660558, 2.649534, 3.442740, 5…</span></span>
-<span><span class="co">#&gt; $ group              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Hin", "Hin", "Hin", "Hin", "Hin", "Ein", "Ein", "E…</span></span>
-<span><span class="co">#&gt; $ sample_type        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "input", "input", "input", "input", "input", "input…</span></span>
-<span><span class="co">#&gt; $ condition          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "healthy", "healthy", "healthy", "healthy", "health…</span></span>
-<span><span class="co">#&gt; $ is_immune_gene     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "no", "no", "no", "no", "no", "no", "no", "no", "no…</span></span>
-<span><span class="co">#&gt; $ direction          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "up", "up", "up", "up", "up", "up", "up", "up", "up…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ ensembl_gene_id    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ENSMUSG00000033576"<span style="color: #949494;">, </span>"ENSMUSG00000033576"<span style="color: #949494;">, </span>"ENSMUS…</span></span>
+<span><span class="co">#&gt; $ external_gene_name <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Apol6"<span style="color: #949494;">, </span>"Apol6"<span style="color: #949494;">, </span>"Apol6"<span style="color: #949494;">, </span>"Apol6"<span style="color: #949494;">, </span>"Apol6"<span style="color: #949494;">, </span>"Apol6…</span></span>
+<span><span class="co">#&gt; $ sample             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Hin_1"<span style="color: #949494;">, </span>"Hin_2"<span style="color: #949494;">, </span>"Hin_3"<span style="color: #949494;">, </span>"Hin_4"<span style="color: #949494;">, </span>"Hin_5"<span style="color: #949494;">, </span>"Ein_1…</span></span>
+<span><span class="co">#&gt; $ expression         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 2.203755<span style="color: #949494;">, </span>2.203755<span style="color: #949494;">, </span>2.660558<span style="color: #949494;">, </span>2.649534<span style="color: #949494;">, </span>3.442740<span style="color: #949494;">, </span>5…</span></span>
+<span><span class="co">#&gt; $ group              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Hin"<span style="color: #949494;">, </span>"Hin"<span style="color: #949494;">, </span>"Hin"<span style="color: #949494;">, </span>"Hin"<span style="color: #949494;">, </span>"Hin"<span style="color: #949494;">, </span>"Ein"<span style="color: #949494;">, </span>"Ein"<span style="color: #949494;">, </span>"E…</span></span>
+<span><span class="co">#&gt; $ sample_type        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "input"<span style="color: #949494;">, </span>"input"<span style="color: #949494;">, </span>"input"<span style="color: #949494;">, </span>"input"<span style="color: #949494;">, </span>"input"<span style="color: #949494;">, </span>"input…</span></span>
+<span><span class="co">#&gt; $ condition          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "healthy"<span style="color: #949494;">, </span>"healthy"<span style="color: #949494;">, </span>"healthy"<span style="color: #949494;">, </span>"healthy"<span style="color: #949494;">, </span>"health…</span></span>
+<span><span class="co">#&gt; $ is_immune_gene     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no"<span style="color: #949494;">, </span>"no…</span></span>
+<span><span class="co">#&gt; $ direction          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up"<span style="color: #949494;">, </span>"up…</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="basic-usage">Basic usage<a class="anchor" aria-label="anchor" href="#basic-usage"></a>
@@ -114,7 +113,7 @@ to something like
 <span>            columns <span class="op">=</span> <span class="va">sample</span>,</span>
 <span>            values <span class="op">=</span> <span class="va">expression</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="data-scaling">Data scaling<a class="anchor" aria-label="anchor" href="#data-scaling"></a>
@@ -129,7 +128,7 @@ is turned off <code>scale = "none"</code>.</p>
 <span>            values <span class="op">=</span> <span class="va">expression</span>,</span>
 <span>            scale <span class="op">=</span> <span class="st">"row"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="ordering">Ordering<a class="anchor" aria-label="anchor" href="#ordering"></a>
@@ -145,7 +144,7 @@ columns alphabetically, just use the <code><a href="https://dplyr.tidyverse.org/
 <span>              values <span class="op">=</span> <span class="va">expression</span>,</span>
 <span>              scale <span class="op">=</span> <span class="st">"row"</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="color-legend">Color legend<a class="anchor" aria-label="anchor" href="#color-legend"></a>
@@ -160,7 +159,7 @@ the color legend. The default is <em>15</em>.</p>
 <span>            scale <span class="op">=</span> <span class="st">"row"</span>,</span>
 <span>            color_legend_n <span class="op">=</span> <span class="fl">5</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" alt="" width="700"></p>
 <p>You can also define the minimum and maximum values of the color
 legend. Values smaller then the <code>color_legend_min</code> will have
 the lowest color, values bigger than the <code>color_legend_max</code>
@@ -174,7 +173,7 @@ will get the highest color.</p>
 <span>            color_legend_min <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>,</span>
 <span>            color_legend_max <span class="op">=</span> <span class="fl">1</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" alt="" width="700"></p>
 <p>Of course, you can also change the <code>colors</code> themselves.
 The number of <code>colors</code> you provide does not have to match
 <code>color_legend_n</code>. The color legend is automatically adjusted
@@ -188,7 +187,7 @@ to have <code>color_legend_n</code> colors (the default is
 <span>            scale <span class="op">=</span> <span class="st">"row"</span>,</span>
 <span>            colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"#145afc"</span>,<span class="st">"#ffffff"</span>,<span class="st">"#ee4445"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="annotations">Annotations<a class="anchor" aria-label="anchor" href="#annotations"></a>
@@ -208,7 +207,7 @@ one variable for annotation just combine them by
 <span>            annotation_col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">sample_type</span>, <span class="va">condition</span>, <span class="va">group</span><span class="op">)</span>,</span>
 <span>            annotation_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">is_immune_gene</span>, <span class="va">direction</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-11-1.png" class="r-plt" alt="" width="700"></p>
 <div class="section level3">
 <h3 id="customize-annotations-colors">Customize annotations colors<a class="anchor" aria-label="anchor" href="#customize-annotations-colors"></a>
 </h3>
@@ -232,7 +231,7 @@ annotations colors <code>annotation_colors</code>.</p>
 <span>            annotation_row <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">is_immune_gene</span>, <span class="va">direction</span><span class="op">)</span>,</span>
 <span>            annotation_colors <span class="op">=</span> <span class="va">ann_colors</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-12-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 </div>
 <div class="section level2">
@@ -253,7 +252,7 @@ used to generate the gaps. Only one variable can be chosen for each
 <span>            gaps_row <span class="op">=</span> <span class="va">direction</span>,</span>
 <span>            gaps_col <span class="op">=</span> <span class="va">group</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="cell-dimensions">Cell dimensions<a class="anchor" aria-label="anchor" href="#cell-dimensions"></a>
@@ -274,7 +273,7 @@ used to generate the gaps. Only one variable can be chosen for each
 <span>            cellwidth <span class="op">=</span> <span class="fl">7</span>,</span>
 <span>            cellheight <span class="op">=</span> <span class="fl">7</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-14-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="show-selected-labels">Show selected labels<a class="anchor" aria-label="anchor" href="#show-selected-labels"></a>
@@ -297,7 +296,7 @@ rest, you can use <code>show_selected_row_labels</code> or
 <span>            cellheight <span class="op">=</span> <span class="fl">7</span>,</span>
 <span>            show_selected_row_labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Apol6"</span>,<span class="st">"Bsn"</span>,<span class="st">"Vgf"</span>,<span class="st">"Fam96b"</span>,<span class="st">"Bag1"</span>,<span class="st">"Aip"</span><span class="op">)</span>,</span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-15-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-15-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="write-to-file">Write to file<a class="anchor" aria-label="anchor" href="#write-to-file"></a>
@@ -329,7 +328,7 @@ in the documentation of <code><a href="../reference/tidyheatmap.html">tidyheatma
 <span>            cluster_cols <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>            display_numbers <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-17-1.png" width="700"></p>
+<p><img src="tidyheatmaps_files/figure-html/unnamed-chunk-17-1.png" class="r-plt" alt="" width="700"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -342,7 +341,7 @@ in the documentation of <code><a href="../reference/tidyheatmap.html">tidyheatma
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
